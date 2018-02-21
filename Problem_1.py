@@ -21,50 +21,47 @@ for natural_number in range(1, 1001):
         accumulator = accumulator + natural_number
 
 # Read out the sum:
-print("Brute force 3s & 5s: ", accumulator)
+print('Brute force 3s & 5s: ', accumulator)
 
+
+#This version uses the mnemonic for multiples of 3 (sum of digits is a multiple of 3):
 
 accumulator = 0
-
-# I'm not sure there is a way to confirm all multiples without checking each digit.
-# This loop checks digits 1 to 1000:
-
 for natural_number in range(1, 1001):
 
 # Define sum of digits:
     digit_sum = sum(int(digit) for digit in str(natural_number))
 
-# Check if digit is evenly divisible by 3; if so, increment the running sum by the digit:
     if digit_sum % 3 == 0:
         accumulator = accumulator + natural_number
-
-# Check if digit is evenly divisible by 5; if so, increment the running sum by the digit:
     elif natural_number % 5 == 0:
         accumulator = accumulator + natural_number
+print('Human 3s: ', accumulator)
 
-# Read out the sum:
-print("Human 3s: ", accumulator)
-
+#This version uses the mnemonic for multiples of 5 (final digit is 0 or 5):
 
 accumulator = 0
+for natural_number in range(1, 1001):
+    if natural_number % 3 == 0:
+        accumulator = accumulator + natural_number
 
-# I'm not sure there is a way to confirm all multiples without checking each digit.
-# This loop checks digits 1 to 1000:
+# Check string version of final digit against list of 0, 5:
+    elif str(natural_number)[-1] in ['0', '5']:
 
+        accumulator = accumulator + natural_number
+print('Human 5s: ', accumulator)
+
+# This version uses both mnemoincs:
+
+accumulator = 0
 for natural_number in range(1, 1001):
 
+# Define number as string of characters
     chars = str(natural_number)
 
-# Define sum of digit:
     digit_sum = sum(int(digit) for digit in chars)
-
-# Check if digit is evenly divisible by 3; if so, increment the running sum by the digit:
     if digit_sum % 3 == 0:
         accumulator = accumulator + natural_number
-
-# Check if digit is evenly divisible by 5; if so, increment the running sum by the digit:
     elif chars[-1] in ["0", "5"]:
         accumulator = accumulator + natural_number
-
-# Read out the sum:
 print("Human 3s & 5s: ", accumulator)
