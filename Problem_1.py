@@ -123,9 +123,9 @@ def summation(k, n):
 # Calculate sum for each test value and double-counted values
 test_value_1_sum = summation(test_value_1, max_value)
 test_value_2_sum = summation(test_value_2, max_value)
-overlap = summation(test_value_lcm, max_value)
+overlap_sum = summation(test_value_lcm, max_value)
 
-total = test_value_1_sum + test_value_2_sum - overlap
+total = test_value_1_sum + test_value_2_sum - overlap_sum
 
 summation_time = time.clock() - summation_start
 print('Summation method: ', total, ' | Time: ', summation_time)
