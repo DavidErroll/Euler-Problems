@@ -12,9 +12,7 @@ machine_start = time.clock()
 # Set a variable to calculate the sum as each digit is checked:
 accumulator = 0
 
-# I'm not sure there is a way to confirm all multiples without checking each digit.
-# This loop checks digits 1 to 999:
-
+# Loop checks digits 1 to 999:
 for natural_number in range(1, 1000):
 
 # Check if digit is evenly divisible by 3; if so, increment the running sum by the digit:
