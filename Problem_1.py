@@ -26,7 +26,7 @@ for natural_number in range(1, 1000):
 
 machine_time = time.clock() - machine_start
 
-# Read out the sum:
+# Read out the sum and elapsed time:
 print('Brute force 3s & 5s: ', accumulator, ' | Time: ', machine_time)
 
 
@@ -69,7 +69,7 @@ human3and5s_start = time.clock()
 accumulator = 0
 for natural_number in range(1, 1000):
 
-# Define number as string of characters
+# Define number as string
     chars = str(natural_number)
 
     digit_sum = sum(int(digit) for digit in chars)
