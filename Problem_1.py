@@ -4,6 +4,7 @@
 # Find the sum of all the multiples of 3 or 5 below 1000.
 
 import time
+import fractions
 
 # Start timing
 machine_start = time.clock()
@@ -78,4 +79,33 @@ for natural_number in range(1, 1000):
     elif chars[-1] in ["0", "5"]:
         accumulator = accumulator + natural_number
 human3and5s_time = time.clock() - human3and5s_start
-print("Human 3s & 5s: ", accumulator, ' | Time: ', human3and5s_time)
+print('Human 3s & 5s: ', accumulator, ' | Time: ', human3and5s_time)
+
+
+# This version implements the kn(n+1)/2 method:
+import fractions
+
+summation_start = time.clock()
+
+max_value = 999
+test_value_1 = 3
+test_value_2 = 5
+
+# Find least common multiple of test values
+test_value_gcd = fractions.gcd(test_value_1, test_value_2)
+test_value_lcm = int( (test_value_1 * test_value_2) / test_value_gcd )
+
+# sum = kn(n+1)/2
+def summation(k, n):
+    z = k * (n // k) * ( (n // k) + 1) // 2
+    return z
+
+# Calculate sum for each test value and double-counted values
+test_value_1_sum = summation(test_value_1, max_value)
+test_value_2_sum = summation(test_value_2, max_value)
+overlap = summation(test_value_lcm, max_value)
+
+total = test_value_1_sum + test_value_2_sum - overlap
+
+summation_time = time.clock() - summation_start
+print('Summation method: ', total, ' | Time: ', summation_time)
