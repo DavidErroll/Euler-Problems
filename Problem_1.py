@@ -104,7 +104,6 @@ print('Human 3s & 5s: ', accumulator, ' | Time: ', human3and5s_time)
 
 
 # This version implements the kn(n+1)/2 method:
-import fractions
 
 summation_start = time.clock()
 
