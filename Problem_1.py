@@ -12,9 +12,9 @@ machine_start = time.clock()
 accumulator = 0
 
 # I'm not sure there is a way to confirm all multiples without checking each digit.
-# This loop checks digits 1 to 1000:
+# This loop checks digits 1 to 999:
 
-for natural_number in range(1, 1001):
+for natural_number in range(1, 1000):
 
 # Check if digit is evenly divisible by 3; if so, increment the running sum by the digit:
     if natural_number % 3 == 0:
@@ -34,7 +34,7 @@ print('Brute force 3s & 5s: ', accumulator, ' | Time: ', machine_time)
 
 human3s_start = time.clock()
 accumulator = 0
-for natural_number in range(1, 1001):
+for natural_number in range(1, 1000):
 
 # Define sum of digits:
     digit_sum = sum(int(digit) for digit in str(natural_number))
@@ -51,7 +51,7 @@ print('Human 3s: ', accumulator, ' | Time: ', human3s_time)
 
 human5s_start = time.clock()
 accumulator = 0
-for natural_number in range(1, 1001):
+for natural_number in range(1, 1000):
     if natural_number % 3 == 0:
         accumulator = accumulator + natural_number
 
@@ -67,7 +67,7 @@ print('Human 5s: ', accumulator, ' | Time: ', human5s_time)
 
 human3and5s_start = time.clock()
 accumulator = 0
-for natural_number in range(1, 1001):
+for natural_number in range(1, 1000):
 
 # Define number as string of characters
     chars = str(natural_number)
