@@ -47,6 +47,7 @@ for natural_number in range(1, max_value + 1):
 
 # Define sum of digits (generalized for timing but only works for 3):
     digit_sum = sum(int(digit) for digit in str(natural_number))
+
     if digit_sum % test_value_1 == 0:
         accumulator = accumulator + natural_number
 
