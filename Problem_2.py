@@ -10,9 +10,9 @@ import time
 d_start = time.clock()
 
 last_fib = 0
-fib_a = 1
-fib_b = 2
-fib_sum = 2
+fib_a = 0
+fib_b = 1
+fib_sum = 0
 
 while last_fib <= 4000000:
     last_fib = fib_a + fib_b
