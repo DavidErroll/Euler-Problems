@@ -21,11 +21,11 @@ while last_fib <= 4000000:
     if  last_fib % 2 == 0:
         fib_sum = fib_sum + last_fib
 
-d_time = time.clock() - d_start
-
 print(fib_sum)
+print(time.clock() - d_start)
 
 
+alt_start = time.clock()
 
 def fibs(limit):
     a, b = 0, 1
@@ -34,3 +34,4 @@ def fibs(limit):
         a, b = b, a + b
 
 print(sum(i for i in fibs(4000000) if not i % 2))
+print(time.clock() - alt_start)
