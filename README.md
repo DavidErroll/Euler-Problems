@@ -7,5 +7,8 @@ Since I have always enjoyed pure math and the truly elegant, pithy solutions to 
 ## Format
 
 Each problem file will likely include at least two blocks of code:
-> my initial attempt at a solution; and
-> at least one solution that presents more elegant math, code, or both.
+* my initial attempt at a solution; and
+* at least one additional solution that presents
+** more elegant math;
+** more elegant code; or
+** both.
