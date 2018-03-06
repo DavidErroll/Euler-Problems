@@ -11,10 +11,10 @@
 
 test_value = 600851475143
 test_check = 0
+test_divisor = 2
 
 while not test_check:
 
-  test_divisor = 2
   test_factor = test_value / test_divisor
   
   if test_factor % 1 == 0:
@@ -29,6 +29,7 @@ while not test_check:
     else:
       brute_divisor = test_factor // 7
       while test_factor % brute_divisor != 0 or brute_divisor == 1:
+        
         brute_divisor = brute_divisor - 1
         test_check = 1
         return brute_divisor
