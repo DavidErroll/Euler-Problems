@@ -7,3 +7,15 @@
 # Since prime factorization is the basis of current encryption methods, I am confident that:
 #   1. a brute-force loop of some type is necessary; and
 #   2. people who know how to optimize code for speed will have written superior loops.
+
+
+# Greatest prime factor is n/2
+
+
+# Function to check if prime
+
+
+# Seive all easy negatives
+
+
+# Find k ** 2 <= x
