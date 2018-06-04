@@ -19,16 +19,19 @@ def collatz_chain_length(start_point):
     chain_length = 1
     limit = 0
 
-    while x != 1 and limit < 10000000:
+    while x != 1 and limit < 1000000:
 
         if x % 2:
             x = 3 * x + 1
-            chain_length, limit += 1
+            chain_length += 1
+            limit += 1
         else:
             x = x / 2
-            chain_length, limit += 1
+            chain_length += 1
+            limit += 1
 
     return(chain_length)
+
 
 def max_length(max_value):
 
