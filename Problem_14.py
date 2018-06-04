@@ -16,18 +16,19 @@
 def collatz_chain_length(start_point):
 
     x = start_point
-    chain_length = 0
+    chain_length = 1
+    limit = 0
 
-    if x != 1:
+    while x != 1 and limit < 10000000:
 
         if x % 2:
             x = 3 * x + 1
+            chain_length, limit += 1
         else:
             x = x / 2
-        chain_length += 1
+            chain_length, limit += 1
 
-    else:
-        return(chain_length)
+    return(chain_length)
 
 def max_length(max_value):
 
@@ -38,7 +39,7 @@ def max_length(max_value):
 
         test_iteration_length = collatz_chain_length(i)
 
-        if test_iteration_length > current_max_length:
+        if test_iteration_length >= current_max_length:
 
             max_iteration = i
             current_max_length = test_iteration_length
@@ -46,7 +47,7 @@ def max_length(max_value):
         else:
             pass
 
-    return(max_iteration, current_max)
+    return(max_iteration, current_max_length)
 
 def interface():
      max_val = int(input("Maximum Collatz chain value = "))
