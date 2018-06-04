@@ -15,7 +15,11 @@
 
 def collatz_chain_length(start_point):
 
-    x = start_point
+    if start_point < 2:
+        x = 2
+    else:
+        x = start_point
+
     chain_length = 1
     limit = 0
 
